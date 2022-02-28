@@ -1,6 +1,6 @@
 ## Markov Chain
 
-There is just status `transaction` in the model. Using the previous status to obtain the probability distribution of the next status
+There is just status `transaction` in the model. Using the previous status to obtain the probability distribution of the next status.    
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/39432361/156053942-df9bccf4-b9a6-4fbc-a9cb-27e6547b5598.png">
 
 
@@ -21,8 +21,6 @@ Given the result of filtering up to time t, agent can directly compute the resul
 <img width="400" alt="image" src="https://user-images.githubusercontent.com/39432361/156059123-4b9efb16-27bf-439e-afe8-7269dbbebee7.png">   <img width="400" alt="image" src="https://user-images.githubusercontent.com/39432361/156059179-588b8b33-4174-43dd-95f8-6da30be550c9.png">
 
 ### Filtering and prediction in HMM
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/39432361/156060062-7ad2d9a9-c515-489d-8aa8-28222f4a6253.png">
-
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/39432361/156071167-f1c25a95-3305-4052-80cc-299b469d7ff2.png">
+<img width="400" alt="image" src="https://user-images.githubusercontent.com/39432361/156060062-7ad2d9a9-c515-489d-8aa8-28222f4a6253.png">   <img width="400" alt="image" src="https://user-images.githubusercontent.com/39432361/156071167-f1c25a95-3305-4052-80cc-299b469d7ff2.png">
 
 
