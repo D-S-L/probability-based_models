@@ -10,6 +10,4 @@ therefore, for HMM, there are two sections:
 1. Transition model 
 2. Sensor model
 
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/39432361/156054422-1107bdc3-7f6a-43d0-9da4-859fb12f2c4a.png">
-
-<img width="300" alt="image" src="https://user-images.githubusercontent.com/39432361/156054610-bb709933-e119-40c8-a24f-4b920f8bbe24.png">
+<img width="300" alt="image" src="https://user-images.githubusercontent.com/39432361/156054422-1107bdc3-7f6a-43d0-9da4-859fb12f2c4a.png"><img width="300" alt="image" src="https://user-images.githubusercontent.com/39432361/156054610-bb709933-e119-40c8-a24f-4b920f8bbe24.png">
