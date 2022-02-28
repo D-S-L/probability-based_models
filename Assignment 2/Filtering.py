@@ -2,11 +2,37 @@ def filtering(evidence_data_add, prior, total_day):
     # you need to implement this method.
 
     x_prob_rain = []
-    # x_prob_sunny[i] = 1 - x_prob_rain[i]
 
-    for i in range(100):
-        x_prob_rain.append(0.0)
-        
+    umbrella ={1:(0.9,0.2),0:(0.1,0.8)}   #key: take umbrella or not, value: rain or not
+    transition ={1:0.7,0:0.3}             #key: yesterday rain or not, value: the probability of rain in the next day
+
+    with open(evidence_data_add) as f:
+        cur_data = f.readline()
+
+        while cur_data:
+            evidence = cur_data.strip().split("\t")[1]   # obtain evidence
+            evidence = 0 if evidence=='no umbrella' else 1
+            previous_date_r = x_prob_rain[-1] if x_prob_rain else 0.5   # obtain previous probability distribution
+
+            T_r = previous_date_r*transition[1] + (1-previous_date_r)*transition[0]
+            T_s = 1-T_r
+
+            # print(T_r)
+            cur_e_r = umbrella[evidence][0]*T_r
+            cur_e_s = umbrella[evidence][1]*T_s
+
+            s = cur_e_r+cur_e_s
+            cur_e_r = cur_e_r/s
+            cur_e_s = cur_e_s/s
+            # print(cur_e_r,cur_e_s)
+            # x_prob_sunny[i] = 1 - x_prob_rain[i]
+
+            x_prob_rain.append(cur_e_r)
+
+            cur_data = f.readline()
+            # if count == 2:
+            #     break
+
     return x_prob_rain
 
 
