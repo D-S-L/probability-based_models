@@ -12,7 +12,7 @@ def filtering(evidence_data_add, prior, total_day):
         while cur_data:
             evidence = cur_data.strip().split("\t")[1]   # obtain evidence
             evidence = 0 if evidence=='no umbrella' else 1
-            previous_date_r = x_prob_rain[-1] if x_prob_rain else 0.5   # obtain previous probability distribution
+            previous_date_r = x_prob_rain[-1] if x_prob_rain else prior[0]   # obtain previous probability distribution
 
             T_r = previous_date_r*transition[1] + (1-previous_date_r)*transition[0]
             T_s = 1-T_r
