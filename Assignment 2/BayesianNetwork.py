@@ -13,7 +13,7 @@ def parse(data_add, child, parents,matrix):
 
             s_matrix = np.zeros((matrix.shape[1],matrix.shape[2]))
 
-            while cur_l:
+            while cur_l:   # fill the np matrix----the appearance number
                 cur_l =  cur_l.split('\t')
 
                 par = (int(cur_l[parents[0]])-1,int(cur_l[parents[1]])-1)
@@ -24,10 +24,8 @@ def parse(data_add, child, parents,matrix):
 
             for i in range(matrix.shape[0]):
                 s_matrix +=matrix[i]
-            # print(s_matrix)
-            # print('---````-----')
-            # print(matrix/s_matrix)
-        return matrix/s_matrix
+
+        return matrix/s_matrix   #divided by the total number --- get probability
 
 
 

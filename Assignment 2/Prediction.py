@@ -23,7 +23,7 @@ def prediction(evidence_data_add, prior, start_day, end_day):
             cur_e_r = umbrella[evidence][0]*T_r
             cur_e_s = umbrella[evidence][1]*T_s
             s = cur_e_r+cur_e_s
-            cur_e_r = cur_e_r/s
+            cur_e_r = cur_e_r/s                # normalization
             x_prob_rain_pre.append(cur_e_r)
 
             cur_data = f.readline()

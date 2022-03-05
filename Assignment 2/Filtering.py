@@ -17,21 +17,16 @@ def filtering(evidence_data_add, prior, total_day):
             T_r = previous_date_r*transition[1] + (1-previous_date_r)*transition[0]
             T_s = 1-T_r
 
-            # print(T_r)
             cur_e_r = umbrella[evidence][0]*T_r
             cur_e_s = umbrella[evidence][1]*T_s
 
             s = cur_e_r+cur_e_s
-            cur_e_r = cur_e_r/s
-            cur_e_s = cur_e_s/s
-            # print(cur_e_r,cur_e_s)
-            # x_prob_sunny[i] = 1 - x_prob_rain[i]
+            cur_e_r = cur_e_r/s    #normalization
 
             x_prob_rain.append(cur_e_r)
 
             cur_data = f.readline()
-            # if count == 2:
-            #     break
+
 
     return x_prob_rain
 
